@@ -1,0 +1,33 @@
+name: HoYoLAB Auto Check-In
+
+on:
+  schedule:
+    # 13:00 UTC tương đương 20:00 (8h tối) giờ Việt Nam (UTC+7)
+    - cron: '0 13 * * *'
+  workflow_dispatch: # Nút cho phép chạy thủ công 
+
+jobs:
+  check-in:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt || pip install requests
+
+      - name: Generate config.json
+        env:
+          COOKIE: ${{ secrets.cookie }}
+        run: |
+          echo "{\"accounts\": [{\"cookie\": \"$COOKIE\", \"games\": [\"gi\"]}]}" > config.json
+        
+      - name: Run script
+        env:
+          USER_AGENT: ${{ secrets.user_agent }}
+        run: python main.py
