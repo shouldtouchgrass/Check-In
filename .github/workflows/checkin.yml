@@ -3,7 +3,7 @@ name: HoYoLAB Auto Check-In
 on:
   schedule:
     # 13:00 UTC tương đương 20:00 (8h tối) giờ Việt Nam (UTC+7)
-    - cron: '0 13 * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch: # Nút cho phép chạy thủ công 
 
 jobs:
