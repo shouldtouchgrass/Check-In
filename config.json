@@ -1,0 +1,16 @@
+{
+  "accounts": [
+    {
+      "cookie": "ltuid_v2=your_ltuid; ltoken_v2=your_ltoken",
+      "games": ["zzz", "gi", "hsr", "hi3", "tot"]
+    },
+    {
+      "cookie": "ltuid_v2=161644405; ltoken_v2=v2_CAISDGM5b3FhcTNzM2d1OBokM2MwZDJhMTUtYTM3Zi00MjAzLWE5NDgtMDU1NmU2YjFiMGI2IMLsmNYGKLTQowMw9f6JTUILYmJzX292ZXJzZWFqAlNH.QjbGagAAAAAB.MEUCIQD7uXFhpMSHJQXp8PIeNiZXSTneju4TSj1dpGxwg7AJtQIgG83na4b13KRgJv1_oDuOQ31KZCpjClegYdW0rHBXYXs",
+      "games": ["gi", "tot"]
+    }
+  ],
+  "discord": {
+    "webhook_url": "https://discord.com/api/webhooks/...",
+    "user_id": "your_discord_user_id"
+  }
+}
